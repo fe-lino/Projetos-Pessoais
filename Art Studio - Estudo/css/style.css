@@ -35,7 +35,7 @@ html::-webkit-scrollbar-track{
 }
 
 html::-webkit-scrollbar-thumb{
-   background: #fff;
+   background: rgb(0, 0, 0);
    border-radius: 5rem;
 }
 
@@ -52,8 +52,23 @@ section{
     display: inline-block;
     padding: .9rem 3rem;
     font-size: 1.7rem;
-    color:#fff;
-    background-color: var(--main-color);
+    color:rgb(255, 255, 255);
+    /* background-color: var(--main-color); */
+    background: linear-gradient(45deg, #87adfe, #ff77cd);
+    box-shadow: 3px 8px 22px rgba(94,28,68,0.15);
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.btnCart{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color:rgb(255, 255, 255);
+    /* background-color: var(--main-color); */
+    background: linear-gradient(45deg, #87adfe, #ff77cd);
+    box-shadow: 3px 8px 22px rgba(94,28,68,0.15);
     cursor: pointer;
     border-radius: .5rem;
 }
@@ -62,26 +77,30 @@ section{
     letter-spacing: .2rem;
 }
 
+.btnCart:hover{
+    letter-spacing: .2rem;
+}
+
 .header{
-    background: var(--bg);
+    /* background: var(--bg); */
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 7%;
-    border-bottom: var(--border);
+    /* border-bottom: var(--border); */
     position: fixed;
     top: 0; left: 0 ; right: 0;
     z-index: 1000;
 }
 
 .header .logoHeader img{
-    height: 6rem;
+    height: 10rem;
 }
 
 .header .navbar a{
     margin: 0 1rem;
     font-size: 1.6rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .header .navbar a:hover{
@@ -91,7 +110,7 @@ section{
 }
 
 .header .icons div{
-    color: #fff;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     font-size: 2.5rem;
     margin-left: 2rem;
@@ -107,7 +126,7 @@ section{
 
 .header .search-form{
     position: absolute;
-    top: 115%; right: 7%;
+    top: 80%; right: 7%;
     background: #fff;
     width: 50rem;
     height: 5rem;
@@ -143,11 +162,14 @@ section{
 
 .header .cart-items-container{
     position: absolute;
-    top: 100%; right: -100%;
+    top: 80%; right: -100%;
     height: calc(100vh - 9.5rem);
     width: 35rem;
-    background: white;
+    background: #FFB0A1;
     padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header .cart-items-container.active{
@@ -159,6 +181,7 @@ section{
 }
 
 .header .cart-items-container .cart-item{
+    width: 100%;
     position: relative;
     margin: 2rem 0;
     display: flex;
@@ -194,40 +217,79 @@ section{
     text-align: center;
 }
 
+.header .user-form{
+    position: absolute;
+    top: 80%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #FFB0A1;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header .user-form.active{
+    right: 0;
+}
+
+
+.user-form.active::after{
+    content: "";
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+    top: 0;
+}
+
+.header .user-form input{
+    width: 70%;
+    height: 4.5vh;
+    padding-left: 2px;
+}
+
 /* home */
 
 .home{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    /* background: url(../css/img/img-bg2.jpg) no-repeat; */
+    background: url(../css/img/background.png) no-repeat;
     background-size: cover;
     background-position: center;
-
 }
 
 .home .content{
     max-width: 60rem;
+    margin-left: 10%;
+    margin-top: 5%;
 }
 .home .content h3{
     font-size: 6rem;
     text-transform: uppercase;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     
 }
 
 .home .content p{
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 2.5rem;
+    font-weight: 350;
     line-height: 1.8;
     padding: 1rem 0;
-    color: rgb(255, 255, 255);
-    
+    color: rgb(0, 0, 0);
+    text-transform: none;
 }
 
 
+/*sobre*/
 
-
+.sobre{
+    min-height: 100vh;
+    color: rgb(0, 0, 0);
+}
 
 
 

@@ -25,8 +25,19 @@ document.querySelector('#menu-btn').onclick = () => {
     console.log('teste');
   };
 
+  let userForm = document.querySelector('.user-form');
+
+  document.querySelector('#user-btn').onclick = () =>{
+    userForm.classList.toggle('active');
+    searchForm.classList.remove('active');
+    navbar.classList.remove('active');
+    cartItem.classList.remove('active');
+    console.log('teste');
+  }
+
   window.onscroll = () =>{
       navbar.classList.remove('active');
       searchForm.classList.remove('active');
       cartItem.classList.remove('active');
   }
+
